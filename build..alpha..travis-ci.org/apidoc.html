@@ -1,0 +1,4033 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/kalmecak/moment-business-days"
+
+    >moment-business-days (v0.0.10)</a>
+</h1>
+<h4>MomentJS pluin to use business days </h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.moment-business-days">module moment-business-days</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">moment-business-days.</span>suppressDeprecationWarnings</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.moment-business-days">
+            function <span class="apidocSignatureSpan"></span>moment-business-days
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.ISO_8601">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>ISO_8601
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.createFromInputFallback">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>createFromInputFallback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.defineLocale">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>defineLocale
+            <span class="apidocSignatureSpan">(name, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.duration">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>duration
+            <span class="apidocSignatureSpan">(input, key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.invalid">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>invalid
+            <span class="apidocSignatureSpan">(flags)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.isDate">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>isDate
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.isDuration">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>isDuration
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.isMoment">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>isMoment
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.lang">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>lang
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.langData">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>langData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.locale">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>locale
+            <span class="apidocSignatureSpan">(key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.localeData">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>localeData
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.max">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>max
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.min">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>min
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.months">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>months
+            <span class="apidocSignatureSpan">(format, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.monthsShort">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>monthsShort
+            <span class="apidocSignatureSpan">(format, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.normalizeUnits">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>normalizeUnits
+            <span class="apidocSignatureSpan">(units)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.parseTwoDigitYear">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>parseTwoDigitYear
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.parseZone">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>parseZone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.relativeTimeThreshold">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>relativeTimeThreshold
+            <span class="apidocSignatureSpan">(threshold, limit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.unix">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>unix
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.updateOffset">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>updateOffset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.utc">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>utc
+            <span class="apidocSignatureSpan">(input, format, locale, strict)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.weekdays">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>weekdays
+            <span class="apidocSignatureSpan">(format, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.weekdaysMin">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>weekdaysMin
+            <span class="apidocSignatureSpan">(format, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.weekdaysShort">
+            function <span class="apidocSignatureSpan">moment-business-days.</span>weekdaysShort
+            <span class="apidocSignatureSpan">(format, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">moment-business-days.</span>fn</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">moment-business-days.</span>momentProperties</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">moment-business-days.</span>defaultFormat</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">moment-business-days.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.moment-business-days.fn">module moment-business-days.fn</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.add">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>add
+            <span class="apidocSignatureSpan">(val, period)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.businessAdd">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessAdd
+            <span class="apidocSignatureSpan">(days)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.businessDaysIntoMonth">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessDaysIntoMonth
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.businessDiff">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessDiff
+            <span class="apidocSignatureSpan">(param)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.businessSubtract">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessSubtract
+            <span class="apidocSignatureSpan">(days)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.calendar">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>calendar
+            <span class="apidocSignatureSpan">(time, formats)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.clone">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>clone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.date">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>date
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.dates">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>dates
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.day">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>day
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.dayOfYear">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>dayOfYear
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.days">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>days
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.daysInMonth">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>daysInMonth
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.diff">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>diff
+            <span class="apidocSignatureSpan">(input, units, asFloat)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.endOf">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>endOf
+            <span class="apidocSignatureSpan">(units)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.format">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>format
+            <span class="apidocSignatureSpan">(inputString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.from">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>from
+            <span class="apidocSignatureSpan">(time, withoutSuffix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.fromNow">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>fromNow
+            <span class="apidocSignatureSpan">(withoutSuffix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.get">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>get
+            <span class="apidocSignatureSpan">(units, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.hasAlignedHourOffset">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>hasAlignedHourOffset
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.hour">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>hour
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.hours">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>hours
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.invalidAt">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>invalidAt
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isAfter">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isAfter
+            <span class="apidocSignatureSpan">(input, units)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isBefore">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isBefore
+            <span class="apidocSignatureSpan">(input, units)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isBetween">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isBetween
+            <span class="apidocSignatureSpan">(from, to, units)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isBusinessDay">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isBusinessDay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isDST">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isDST
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isDSTShifted">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isDSTShifted
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isHoliday">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isHoliday
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isLeapYear">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isLeapYear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isLocal">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isLocal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isSame">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isSame
+            <span class="apidocSignatureSpan">(input, units)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isUTC">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isUTC
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isUtc">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isUtc
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isUtcOffset">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isUtcOffset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isValid">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isValid
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isoWeek">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeek
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isoWeekYear">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeekYear
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isoWeekday">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeekday
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isoWeeks">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeeks
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.isoWeeksInYear">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeeksInYear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.lang">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>lang
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.local">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>local
+            <span class="apidocSignatureSpan">(keepLocalTime)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.locale">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>locale
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.localeData">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>localeData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.max">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>max
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.millisecond">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>millisecond
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.milliseconds">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>milliseconds
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.min">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>min
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.minute">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>minute
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.minutes">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>minutes
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.month">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>month
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.monthBusinessDays">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthBusinessDays
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.monthBusinessWeeks">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthBusinessWeeks
+            <span class="apidocSignatureSpan">(fromToday)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.monthNaturalDays">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthNaturalDays
+            <span class="apidocSignatureSpan">(fromToday)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.monthNaturalWeeks">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthNaturalWeeks
+            <span class="apidocSignatureSpan">(fromToday)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.months">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>months
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.nextBusinessDay">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>nextBusinessDay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.parseZone">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>parseZone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.parsingFlags">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>parsingFlags
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.prevBusinessDay">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>prevBusinessDay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.quarter">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>quarter
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.quarters">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>quarters
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.second">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>second
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.seconds">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>seconds
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.set">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>set
+            <span class="apidocSignatureSpan">(units, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.startOf">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>startOf
+            <span class="apidocSignatureSpan">(units)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.subtract">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>subtract
+            <span class="apidocSignatureSpan">(val, period)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.to">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>to
+            <span class="apidocSignatureSpan">(time, withoutSuffix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.toArray">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toArray
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.toDate">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toDate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.toISOString">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toISOString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.toJSON">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.toNow">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toNow
+            <span class="apidocSignatureSpan">(withoutSuffix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.toObject">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toObject
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.toString">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.unix">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>unix
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.utc">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>utc
+            <span class="apidocSignatureSpan">(keepLocalTime)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.utcOffset">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>utcOffset
+            <span class="apidocSignatureSpan">(input, keepLocalTime)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.valueOf">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>valueOf
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.week">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>week
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.weekYear">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weekYear
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.weekday">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weekday
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.weeks">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weeks
+            <span class="apidocSignatureSpan">(input)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.weeksInYear">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weeksInYear
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.year">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>year
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.years">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>years
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.zone">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>zone
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.zoneAbbr">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>zoneAbbr
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.moment-business-days.fn.zoneName">
+            function <span class="apidocSignatureSpan">moment-business-days.fn.</span>zoneName
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.moment-business-days" id="apidoc.module.moment-business-days">module moment-business-days</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.moment-business-days" id="apidoc.element.moment-business-days.moment-business-days">
+        function <span class="apidocSignatureSpan"></span>moment-business-days
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function utils_hooks__hooks() {
+    return hookCallback.apply(null, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.ISO_8601" id="apidoc.element.moment-business-days.ISO_8601">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>ISO_8601
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ISO_8601 = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.createFromInputFallback" id="apidoc.element.moment-business-days.createFromInputFallback">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>createFromInputFallback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createFromInputFallback = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.defineLocale" id="apidoc.element.moment-business-days.defineLocale">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>defineLocale
+        <span class="apidocSignatureSpan">(name, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function defineLocale(name, values) {
+    if (values !== null) {
+        values.abbr = name;
+        locales[name] = locales[name] || new Locale();
+        locales[name].set(values);
+
+        // backwards compat for now: also set the locale
+        locale_locales__getSetGlobalLocale(name);
+
+        return locales[name];
+    } else {
+        // useful for testing
+        delete locales[name];
+        return null;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.duration" id="apidoc.element.moment-business-days.duration">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>duration
+        <span class="apidocSignatureSpan">(input, key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create__createDuration(input, key) {
+    var duration = input,
+        // matching against regexp is expensive, do it on demand
+        match = null,
+        sign,
+        ret,
+        diffRes;
+
+    if (isDuration(input)) {
+        duration = {
+            ms : input._milliseconds,
+            d  : input._days,
+            M  : input._months
+        };
+    } else if (typeof input === &#x27;number&#x27;) {
+        duration = {};
+        if (key) {
+            duration[key] = input;
+        } else {
+            duration.milliseconds = input;
+        }
+    } else if (!!(match = aspNetRegex.exec(input))) {
+        sign = (match[1] === &#x27;-&#x27;) ? -1 : 1;
+        duration = {
+            y  : 0,
+            d  : toInt(match[DATE])        * sign,
+            h  : toInt(match[HOUR])        * sign,
+            m  : toInt(match[MINUTE])      * sign,
+            s  : toInt(match[SECOND])      * sign,
+            ms : toInt(match[MILLISECOND]) * sign
+        };
+    } else if (!!(match = create__isoRegex.exec(input))) {
+        sign = (match[1] === &#x27;-&#x27;) ? -1 : 1;
+        duration = {
+            y : parseIso(match[2], sign),
+            M : parseIso(match[3], sign),
+            d : parseIso(match[4], sign),
+            h : parseIso(match[5], sign),
+            m : parseIso(match[6], sign),
+            s : parseIso(match[7], sign),
+            w : parseIso(match[8], sign)
+        };
+    } else if (duration == null) {// checks for null or undefined
+        duration = {};
+    } else if (typeof duration === &#x27;object&#x27; &#x26;&#x26; (&#x27;from&#x27; in duration || &#x27;to&#x27; in duration)) {
+        diffRes = momentsDifference(local__createLocal(duration.from), local__createLocal(duration.to));
+
+        duration = {};
+        duration.ms = diffRes.milliseconds;
+        duration.M = diffRes.months;
+    }
+
+    ret = new Duration(duration);
+
+    if (isDuration(input) &#x26;&#x26; hasOwnProp(input, &#x27;_locale&#x27;)) {
+        ret._locale = input._locale;
+    }
+
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.invalid" id="apidoc.element.moment-business-days.invalid">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>invalid
+        <span class="apidocSignatureSpan">(flags)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function valid__createInvalid(flags) {
+    var m = create_utc__createUTC(NaN);
+    if (flags != null) {
+        extend(getParsingFlags(m), flags);
+    }
+    else {
+        getParsingFlags(m).userInvalidated = true;
+    }
+
+    return m;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.isDate" id="apidoc.element.moment-business-days.isDate">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>isDate
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDate(input) {
+    return input instanceof Date || Object.prototype.toString.call(input) === &#x27;[object Date]&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.isDuration" id="apidoc.element.moment-business-days.isDuration">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>isDuration
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDuration(obj) {
+    return obj instanceof Duration;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.isMoment" id="apidoc.element.moment-business-days.isMoment">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>isMoment
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isMoment(obj) {
+    return obj instanceof Moment || (obj != null &#x26;&#x26; obj._isAMomentObject != null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.lang" id="apidoc.element.moment-business-days.lang">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>lang
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lang = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.langData" id="apidoc.element.moment-business-days.langData">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>langData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">langData = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.locale" id="apidoc.element.moment-business-days.locale">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>locale
+        <span class="apidocSignatureSpan">(key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function locale_locales__getSetGlobalLocale(key, values) {
+    var data;
+    if (key) {
+        if (typeof values === &#x27;undefined&#x27;) {
+            data = locale_locales__getLocale(key);
+        }
+        else {
+            data = defineLocale(key, values);
+        }
+
+        if (data) {
+            // moment.duration._locale = moment._locale = data;
+            globalLocale = data;
+        }
+    }
+
+    return globalLocale._abbr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+````javascript
+
+var moment = require(&#x27;moment-business-days&#x27;);
+
+var july4th = &#x27;07-04-2015&#x27;;
+var laborDay = &#x27;09-07-2015&#x27;;
+
+moment.<span class="apidocCodeKeywordSpan">locale</span>(&#x27;us&#x27;, {
+   holidays: [july4th, laborDay],
+   holidayFormat: &#x27;MM-DD-YYYY&#x27;
+});
+
+// moment-business-days will now stop considering these holidays as business days
+
+````
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.localeData" id="apidoc.element.moment-business-days.localeData">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>localeData
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function locale_locales__getLocale(key) {
+    var locale;
+
+    if (key &#x26;&#x26; key._locale &#x26;&#x26; key._locale._abbr) {
+        key = key._locale._abbr;
+    }
+
+    if (!key) {
+        return globalLocale;
+    }
+
+    if (!isArray(key)) {
+        //short-circuit everything else
+        locale = loadLocale(key);
+        if (locale) {
+            return locale;
+        }
+        key = [key];
+    }
+
+    return chooseLocale(key);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+&#x27;use strict&#x27;;
+var moment = require(&#x27;moment&#x27;);
+
+moment.fn.isHoliday = function () {
+    var locale = this.<span class="apidocCodeKeywordSpan">localeData</span>();
+
+    if (locale._holidays) {
+        if (locale._holidays.indexOf(this.format(locale._holidayFormat)) &#x3e;= 0) return true;
+    }
+
+    return false;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.max" id="apidoc.element.moment-business-days.max">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>max
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function max() {
+    var args = [].slice.call(arguments, 0);
+
+    return pickBy(&#x27;isAfter&#x27;, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return businessDaysIntoMonth;
+};
+
+moment.fn.businessDiff = function(param) {
+param = moment(param);
+var signal = param.unix() &#x3c; this.unix()?1:-1;
+var start = moment.min(param, this).clone();
+var end = moment.<span class="apidocCodeKeywordSpan">max</span>(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+var weeks = end_sunday.diff(start_sunday, &#x27;days&#x27;) / 7;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.min" id="apidoc.element.moment-business-days.min">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>min
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function min() {
+    var args = [].slice.call(arguments, 0);
+
+    return pickBy(&#x27;isBefore&#x27;, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return businessDaysIntoMonth;
+};
+
+moment.fn.businessDiff = function(param) {
+param = moment(param);
+var signal = param.unix() &#x3c; this.unix()?1:-1;
+var start = moment.<span class="apidocCodeKeywordSpan">min</span>(param, this).clone();
+var end = moment.max(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+var weeks = end_sunday.diff(start_sunday, &#x27;days&#x27;) / 7;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.months" id="apidoc.element.moment-business-days.months">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>months
+        <span class="apidocSignatureSpan">(format, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lists__listMonths(format, index) {
+    return list(format, index, &#x27;months&#x27;, 12, &#x27;month&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.monthsShort" id="apidoc.element.moment-business-days.monthsShort">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>monthsShort
+        <span class="apidocSignatureSpan">(format, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lists__listMonthsShort(format, index) {
+    return list(format, index, &#x27;monthsShort&#x27;, 12, &#x27;month&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.normalizeUnits" id="apidoc.element.moment-business-days.normalizeUnits">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>normalizeUnits
+        <span class="apidocSignatureSpan">(units)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function normalizeUnits(units) {
+    return typeof units === &#x27;string&#x27; ? aliases[units] || aliases[units.toLowerCase()] : undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.parseTwoDigitYear" id="apidoc.element.moment-business-days.parseTwoDigitYear">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>parseTwoDigitYear
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseTwoDigitYear = function (input) {
+    return toInt(input) + (toInt(input) &#x3e; 68 ? 1900 : 2000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.parseZone" id="apidoc.element.moment-business-days.parseZone">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>parseZone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moment__createInZone() {
+    return local__createLocal.apply(null, arguments).parseZone();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.relativeTimeThreshold" id="apidoc.element.moment-business-days.relativeTimeThreshold">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>relativeTimeThreshold
+        <span class="apidocSignatureSpan">(threshold, limit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function duration_humanize__getSetRelativeTimeThreshold(threshold, limit) {
+    if (thresholds[threshold] === undefined) {
+        return false;
+    }
+    if (limit === undefined) {
+        return thresholds[threshold];
+    }
+    thresholds[threshold] = limit;
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.unix" id="apidoc.element.moment-business-days.unix">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>unix
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moment__createUnix(input) {
+    return local__createLocal(input * 1000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+return businessDaysIntoMonth;
+};
+
+moment.fn.businessDiff = function(param) {
+param = moment(param);
+var signal = param.<span class="apidocCodeKeywordSpan">unix</span>() &#x3c; this.unix()?1:-1;
+var start = moment.min(param, this).clone();
+var end = moment.max(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.updateOffset" id="apidoc.element.moment-business-days.updateOffset">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>updateOffset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">updateOffset = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.utc" id="apidoc.element.moment-business-days.utc">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>utc
+        <span class="apidocSignatureSpan">(input, format, locale, strict)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function create_utc__createUTC(input, format, locale, strict) {
+    return createLocalOrUTC(input, format, locale, strict, true).utc();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.weekdays" id="apidoc.element.moment-business-days.weekdays">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>weekdays
+        <span class="apidocSignatureSpan">(format, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lists__listWeekdays(format, index) {
+    return list(format, index, &#x27;weekdays&#x27;, 7, &#x27;day&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.weekdaysMin" id="apidoc.element.moment-business-days.weekdaysMin">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>weekdaysMin
+        <span class="apidocSignatureSpan">(format, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lists__listWeekdaysMin(format, index) {
+    return list(format, index, &#x27;weekdaysMin&#x27;, 7, &#x27;day&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.weekdaysShort" id="apidoc.element.moment-business-days.weekdaysShort">
+        function <span class="apidocSignatureSpan">moment-business-days.</span>weekdaysShort
+        <span class="apidocSignatureSpan">(format, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lists__listWeekdaysShort(format, index) {
+    return list(format, index, &#x27;weekdaysShort&#x27;, 7, &#x27;day&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.moment-business-days.fn" id="apidoc.module.moment-business-days.fn">module moment-business-days.fn</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.add" id="apidoc.element.moment-business-days.fn.add">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>add
+        <span class="apidocSignatureSpan">(val, period)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (val, period) {
+    var dur, tmp;
+    //invert the arguments, but complain about it
+    if (period !== null &#x26;&#x26; !isNaN(+period)) {
+        deprecateSimple(name, &#x27;moment().&#x27; + name  + &#x27;(period, number) is deprecated. Please use moment().&#x27; + name + &#x27;(number, period
+).&#x27;);
+        tmp = val; val = period; period = tmp;
+    }
+
+    val = typeof val === &#x27;string&#x27; ? +val : val;
+    dur = create__createDuration(val, period);
+    add_subtract__addSubtract(this, dur, direction);
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+moment.fn.businessAdd = function(days) {
+    var signal = days &#x3c; 0 ? -1 : 1;
+    var daysRemaining = Math.abs(days);
+    var d = this.clone();
+    while (daysRemaining) {
+      d.<span class="apidocCodeKeywordSpan">add</span>(signal, &#x27;d&#x27;);
+      if (d.isBusinessDay()) {
+        daysRemaining--;
+      };
+    };
+    return d;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.businessAdd" id="apidoc.element.moment-business-days.fn.businessAdd">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessAdd
+        <span class="apidocSignatureSpan">(days)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">businessAdd = function (days) {
+    var signal = days &#x3c; 0 ? -1 : 1;
+    var daysRemaining = Math.abs(days);
+    var d = this.clone();
+    while (daysRemaining) {
+      d.add(signal, &#x27;d&#x27;);
+      if (d.isBusinessDay()) {
+        daysRemaining--;
+      };
+    };
+    return d;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**businessAdd(days)**
+
+Will add just business days excluding Saturday and Sunday, return a moment date object:
+
+```javascript
+// 30-01-2015 is Friday, DD-MM-YYYY is the format
+moment(&#x27;30-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">businessAdd</span>(3)._d // Wed Feb 04
+ 2015 00:00:00 GMT-0600 (CST)
+```
+
+**businessSubtract(days)**
+
+Will subtract just business days excluding Saturday and Sunday, return a moment date object:
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.businessDaysIntoMonth" id="apidoc.element.moment-business-days.fn.businessDaysIntoMonth">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessDaysIntoMonth
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">businessDaysIntoMonth = function () {
+    var businessDay = this.isBusinessDay() ? this : this.prevBusinessDay();
+    var monthBusinessDays = businessDay.monthBusinessDays();
+    var businessDaysIntoMonth;
+    monthBusinessDays.map(function (day, index) {
+        if (day.format(&#x27;M/DD/YY&#x27;) === businessDay.format(&#x27;M/DD/YY&#x27;))
+            businessDaysIntoMonth = index + 1;
+    });
+
+    return businessDaysIntoMonth;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.businessDiff" id="apidoc.element.moment-business-days.fn.businessDiff">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessDiff
+        <span class="apidocSignatureSpan">(param)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">businessDiff = function (param) {
+    param = moment(param);
+    var signal = param.unix() &#x3c; this.unix()?1:-1;
+    var start = moment.min(param, this).clone();
+    var end = moment.max(param, this).clone();
+    var start_offset = start.day() - 7;
+    var end_offset = end.day();
+
+    var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+    var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+    var weeks = end_sunday.diff(start_sunday, &#x27;days&#x27;) / 7;
+
+    start_offset = Math.abs(start_offset);
+    if (start_offset == 7) {
+      start_offset = 5;
+    } else if (start_offset == 1) {
+      start_offset = 0;
+    } else {
+      start_offset -= 2;
+    };
+
+    if (end_offset == 6) {
+      end_offset--;
+    };
+
+    return signal * (weeks * 5 + start_offset + end_offset);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.businessSubtract" id="apidoc.element.moment-business-days.fn.businessSubtract">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>businessSubtract
+        <span class="apidocSignatureSpan">(days)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">businessSubtract = function (days) {
+    return this.businessAdd(-days);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**businessSubtract(days)**
+
+Will subtract just business days excluding Saturday and Sunday, return a moment date object:
+
+```javascript
+// 27-01-2015 is Tuesday, DD-MM-YYYY is the format
+moment(&#x27;27-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">businessSubtract</span>(3)._d // Thu
+Jan 22 2015 00:00:00 GMT-0600 (CST)
+```
+
+**isBusinessDay()**
+
+Check if the date is a business day and return  **true**/**false**:
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.calendar" id="apidoc.element.moment-business-days.fn.calendar">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>calendar
+        <span class="apidocSignatureSpan">(time, formats)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moment_calendar__calendar(time, formats) {
+    // We want to compare the start of today, vs this.
+    // Getting start-of-today depends on whether we&#x27;re local/utc/offset or not.
+    var now = time || local__createLocal(),
+        sod = cloneWithOffset(now, this).startOf(&#x27;day&#x27;),
+        diff = this.diff(sod, &#x27;days&#x27;, true),
+        format = diff &#x3c; -6 ? &#x27;sameElse&#x27; :
+            diff &#x3c; -1 ? &#x27;lastWeek&#x27; :
+            diff &#x3c; 0 ? &#x27;lastDay&#x27; :
+            diff &#x3c; 1 ? &#x27;sameDay&#x27; :
+            diff &#x3c; 2 ? &#x27;nextDay&#x27; :
+            diff &#x3c; 7 ? &#x27;nextWeek&#x27; : &#x27;sameElse&#x27;;
+    return this.format(formats &#x26;&#x26; formats[format] || this.localeData().calendar(format, this, local__createLocal(now)));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.clone" id="apidoc.element.moment-business-days.fn.clone">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>clone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clone() {
+    return new Moment(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return businessDaysIntoMonth;
+};
+
+moment.fn.businessDiff = function(param) {
+param = moment(param);
+var signal = param.unix() &#x3c; this.unix()?1:-1;
+var start = moment.min(param, this).<span class="apidocCodeKeywordSpan">clone</span>();
+var end = moment.max(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+var weeks = end_sunday.diff(start_sunday, &#x27;days&#x27;) / 7;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.date" id="apidoc.element.moment-business-days.fn.date">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>date
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.dates" id="apidoc.element.moment-business-days.fn.dates">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>dates
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dates = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.day" id="apidoc.element.moment-business-days.fn.day">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>day
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetDayOfWeek(input) {
+    var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
+    if (input != null) {
+        input = parseWeekday(input, this.localeData());
+        return this.add(input - day, &#x27;d&#x27;);
+    } else {
+        return day;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    if (locale._holidays.indexOf(this.format(locale._holidayFormat)) &#x3e;= 0) return true;
+}
+
+return false;
+};
+
+moment.fn.isBusinessDay = function() {
+if (this.<span class="apidocCodeKeywordSpan">day</span>() === 0 || this.day() === 6) return false;
+if (this.isHoliday()) return false;
+return true;
+};
+
+moment.fn.businessDaysIntoMonth = function () {
+var businessDay = this.isBusinessDay() ? this : this.prevBusinessDay();
+var monthBusinessDays = businessDay.monthBusinessDays();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.dayOfYear" id="apidoc.element.moment-business-days.fn.dayOfYear">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>dayOfYear
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetDayOfYear(input) {
+    var dayOfYear = Math.round((this.clone().startOf(&#x27;day&#x27;) - this.clone().startOf(&#x27;year&#x27;)) / 864e5) + 1;
+    return input == null ? dayOfYear : this.add((input - dayOfYear), &#x27;d&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.days" id="apidoc.element.moment-business-days.fn.days">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>days
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetDayOfWeek(input) {
+    var day = this._isUTC ? this._d.getUTCDay() : this._d.getDay();
+    if (input != null) {
+        input = parseWeekday(input, this.localeData());
+        return this.add(input - day, &#x27;d&#x27;);
+    } else {
+        return day;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.daysInMonth" id="apidoc.element.moment-business-days.fn.daysInMonth">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>daysInMonth
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDaysInMonth() {
+    return daysInMonth(this.year(), this.month());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.diff" id="apidoc.element.moment-business-days.fn.diff">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>diff
+        <span class="apidocSignatureSpan">(input, units, asFloat)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function diff(input, units, asFloat) {
+    var that = cloneWithOffset(input, this),
+        zoneDelta = (that.utcOffset() - this.utcOffset()) * 6e4,
+        delta, output;
+
+    units = normalizeUnits(units);
+
+    if (units === &#x27;year&#x27; || units === &#x27;month&#x27; || units === &#x27;quarter&#x27;) {
+        output = monthDiff(this, that);
+        if (units === &#x27;quarter&#x27;) {
+            output = output / 3;
+        } else if (units === &#x27;year&#x27;) {
+            output = output / 12;
+        }
+    } else {
+        delta = this - that;
+        output = units === &#x27;second&#x27; ? delta / 1e3 : // 1000
+            units === &#x27;minute&#x27; ? delta / 6e4 : // 1000 * 60
+            units === &#x27;hour&#x27; ? delta / 36e5 : // 1000 * 60 * 60
+            units === &#x27;day&#x27; ? (delta - zoneDelta) / 864e5 : // 1000 * 60 * 60 * 24, negate dst
+            units === &#x27;week&#x27; ? (delta - zoneDelta) / 6048e5 : // 1000 * 60 * 60 * 24 * 7, negate dst
+            delta;
+    }
+    return asFloat ? output : absFloor(output);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var start = moment.min(param, this).clone();
+var end = moment.max(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+var weeks = end_sunday.<span class="apidocCodeKeywordSpan">diff</span>(start_sunday, &#x27;days&#x27;) / 7;
+
+start_offset = Math.abs(start_offset);
+if (start_offset == 7) {
+  start_offset = 5;
+} else if (start_offset == 1) {
+  start_offset = 0;
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.endOf" id="apidoc.element.moment-business-days.fn.endOf">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>endOf
+        <span class="apidocSignatureSpan">(units)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function endOf(units) {
+    units = normalizeUnits(units);
+    if (units === undefined || units === &#x27;millisecond&#x27;) {
+        return this;
+    }
+    return this.startOf(units).add(1, (units === &#x27;isoWeek&#x27; ? &#x27;week&#x27; : units)).subtract(1, &#x27;ms&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+return this;
+};
+
+moment.fn.monthBusinessDays = function() {
+var me = this.clone();
+var day = me.clone().startOf(&#x27;month&#x27;);
+var end = me.clone().<span class="apidocCodeKeywordSpan">endOf</span>(&#x27;month&#x27;);
+var daysArr = [];
+var done = false;
+while (!done) {
+    if (day.isBusinessDay()) {
+        daysArr.push(day.clone());
+    };
+    if(end.diff(day.add(1,&#x27;d&#x27;)) &#x3c; 0) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.format" id="apidoc.element.moment-business-days.fn.format">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>format
+        <span class="apidocSignatureSpan">(inputString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function format(inputString) {
+    var output = formatMoment(this, inputString || utils_hooks__hooks.defaultFormat);
+    return this.localeData().postformat(output);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x27;use strict&#x27;;
+var moment = require(&#x27;moment&#x27;);
+
+moment.fn.isHoliday = function () {
+var locale = this.localeData();
+
+if (locale._holidays) {
+    if (locale._holidays.indexOf(this.<span class="apidocCodeKeywordSpan">format</span>(locale._holidayFormat)) &#x3e;= 0) return
+ true;
+}
+
+return false;
+};
+
+moment.fn.isBusinessDay = function() {
+if (this.day() === 0 || this.day() === 6) return false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.from" id="apidoc.element.moment-business-days.fn.from">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>from
+        <span class="apidocSignatureSpan">(time, withoutSuffix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function from(time, withoutSuffix) {
+    if (!this.isValid()) {
+        return this.localeData().invalidDate();
+    }
+    return create__createDuration({to: this, from: time}).locale(this.locale()).humanize(!withoutSuffix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.fromNow" id="apidoc.element.moment-business-days.fn.fromNow">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>fromNow
+        <span class="apidocSignatureSpan">(withoutSuffix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fromNow(withoutSuffix) {
+    return this.from(local__createLocal(), withoutSuffix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.get" id="apidoc.element.moment-business-days.fn.get">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>get
+        <span class="apidocSignatureSpan">(units, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSet(units, value) {
+    var unit;
+    if (typeof units === &#x27;object&#x27;) {
+        for (unit in units) {
+            this.set(unit, units[unit]);
+        }
+    } else {
+        units = normalizeUnits(units);
+        if (typeof this[units] === &#x27;function&#x27;) {
+            return this[units](value);
+        }
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.hasAlignedHourOffset" id="apidoc.element.moment-business-days.fn.hasAlignedHourOffset">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>hasAlignedHourOffset
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasAlignedHourOffset(input) {
+    input = input ? local__createLocal(input).utcOffset() : 0;
+
+    return (this.utcOffset() - input) % 60 === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.hour" id="apidoc.element.moment-business-days.fn.hour">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>hour
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hour = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.hours" id="apidoc.element.moment-business-days.fn.hours">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>hours
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hours = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.invalidAt" id="apidoc.element.moment-business-days.fn.invalidAt">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>invalidAt
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function invalidAt() {
+    return getParsingFlags(this).overflow;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isAfter" id="apidoc.element.moment-business-days.fn.isAfter">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isAfter
+        <span class="apidocSignatureSpan">(input, units)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isAfter(input, units) {
+    var inputMs;
+    units = normalizeUnits(typeof units !== &#x27;undefined&#x27; ? units : &#x27;millisecond&#x27;);
+    if (units === &#x27;millisecond&#x27;) {
+        input = isMoment(input) ? input : local__createLocal(input);
+        return +this &#x3e; +input;
+    } else {
+        inputMs = isMoment(input) ? +input : +local__createLocal(input);
+        return inputMs &#x3c; +this.clone().startOf(units);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isBefore" id="apidoc.element.moment-business-days.fn.isBefore">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isBefore
+        <span class="apidocSignatureSpan">(input, units)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBefore(input, units) {
+    var inputMs;
+    units = normalizeUnits(typeof units !== &#x27;undefined&#x27; ? units : &#x27;millisecond&#x27;);
+    if (units === &#x27;millisecond&#x27;) {
+        input = isMoment(input) ? input : local__createLocal(input);
+        return +this &#x3c; +input;
+    } else {
+        inputMs = isMoment(input) ? +input : +local__createLocal(input);
+        return +this.clone().endOf(units) &#x3c; inputMs;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isBetween" id="apidoc.element.moment-business-days.fn.isBetween">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isBetween
+        <span class="apidocSignatureSpan">(from, to, units)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isBetween(from, to, units) {
+    return this.isAfter(from, units) &#x26;&#x26; this.isBefore(to, units);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isBusinessDay" id="apidoc.element.moment-business-days.fn.isBusinessDay">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isBusinessDay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBusinessDay = function () {
+    if (this.day() === 0 || this.day() === 6) return false;
+    if (this.isHoliday()) return false;
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**isBusinessDay()**
+
+Check if the date is a business day and return  **true**/**false**:
+
+```javascript
+// 31-01-2015 is Saturday
+moment(&#x27;31-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">isBusinessDay</span>() // false
+
+// 30-01-2015 is Fridat
+moment(&#x27;30-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).isBusinessDay() // true
+```
+
+**nextBusinessDay()**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isDST" id="apidoc.element.moment-business-days.fn.isDST">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isDST
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDaylightSavingTime() {
+    return (
+        this.utcOffset() &#x3e; this.clone().month(0).utcOffset() ||
+        this.utcOffset() &#x3e; this.clone().month(5).utcOffset()
+    );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isDSTShifted" id="apidoc.element.moment-business-days.fn.isDSTShifted">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isDSTShifted
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDaylightSavingTimeShifted() {
+    if (typeof this._isDSTShifted !== &#x27;undefined&#x27;) {
+        return this._isDSTShifted;
+    }
+
+    var c = {};
+
+    copyConfig(c, this);
+    c = prepareConfig(c);
+
+    if (c._a) {
+        var other = c._isUTC ? create_utc__createUTC(c._a) : local__createLocal(c._a);
+        this._isDSTShifted = this.isValid() &#x26;&#x26;
+            compareArrays(c._a, other.toArray()) &#x3e; 0;
+    } else {
+        this._isDSTShifted = false;
+    }
+
+    return this._isDSTShifted;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isHoliday" id="apidoc.element.moment-business-days.fn.isHoliday">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isHoliday
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isHoliday = function () {
+    var locale = this.localeData();
+
+    if (locale._holidays) {
+        if (locale._holidays.indexOf(this.format(locale._holidayFormat)) &#x3e;= 0) return true;
+    }
+
+    return false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+return false;
+};
+
+moment.fn.isBusinessDay = function() {
+if (this.day() === 0 || this.day() === 6) return false;
+if (this.<span class="apidocCodeKeywordSpan">isHoliday</span>()) return false;
+return true;
+};
+
+moment.fn.businessDaysIntoMonth = function () {
+var businessDay = this.isBusinessDay() ? this : this.prevBusinessDay();
+var monthBusinessDays = businessDay.monthBusinessDays();
+var businessDaysIntoMonth;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isLeapYear" id="apidoc.element.moment-business-days.fn.isLeapYear">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isLeapYear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getIsLeapYear() {
+    return isLeapYear(this.year());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isLocal" id="apidoc.element.moment-business-days.fn.isLocal">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isLocal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isLocal() {
+    return !this._isUTC;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isSame" id="apidoc.element.moment-business-days.fn.isSame">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isSame
+        <span class="apidocSignatureSpan">(input, units)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSame(input, units) {
+    var inputMs;
+    units = normalizeUnits(units || &#x27;millisecond&#x27;);
+    if (units === &#x27;millisecond&#x27;) {
+        input = isMoment(input) ? input : local__createLocal(input);
+        return +this === +input;
+    } else {
+        inputMs = +local__createLocal(input);
+        return +(this.clone().startOf(units)) &#x3c;= inputMs &#x26;&#x26; inputMs &#x3c;= +(this.clone().endOf(units));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isUTC" id="apidoc.element.moment-business-days.fn.isUTC">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isUTC
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUtc() {
+    return this._isUTC &#x26;&#x26; this._offset === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isUtc" id="apidoc.element.moment-business-days.fn.isUtc">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isUtc
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUtc() {
+    return this._isUTC &#x26;&#x26; this._offset === 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isUtcOffset" id="apidoc.element.moment-business-days.fn.isUtcOffset">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isUtcOffset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isUtcOffset() {
+    return this._isUTC;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isValid" id="apidoc.element.moment-business-days.fn.isValid">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isValid
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moment_valid__isValid() {
+    return valid__isValid(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isoWeek" id="apidoc.element.moment-business-days.fn.isoWeek">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeek
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetISOWeek(input) {
+    var week = weekOfYear(this, 1, 4).week;
+    return input == null ? week : this.add((input - week) * 7, &#x27;d&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isoWeekYear" id="apidoc.element.moment-business-days.fn.isoWeekYear">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeekYear
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetISOWeekYear(input) {
+    var year = weekOfYear(this, 1, 4).year;
+    return input == null ? year : this.add((input - year), &#x27;y&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isoWeekday" id="apidoc.element.moment-business-days.fn.isoWeekday">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeekday
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetISODayOfWeek(input) {
+    // behaves the same as moment#day except
+    // as a getter, returns 7 instead of 0 (1-7 range instead of 0-6)
+    // as a setter, sunday should belong to the previous week.
+    return input == null ? this.day() || 7 : this.day(this.day() % 7 ? input : input - 7);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isoWeeks" id="apidoc.element.moment-business-days.fn.isoWeeks">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeeks
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetISOWeek(input) {
+    var week = weekOfYear(this, 1, 4).week;
+    return input == null ? week : this.add((input - week) * 7, &#x27;d&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.isoWeeksInYear" id="apidoc.element.moment-business-days.fn.isoWeeksInYear">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>isoWeeksInYear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getISOWeeksInYear() {
+    return weeksInYear(this.year(), 1, 4);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.lang" id="apidoc.element.moment-business-days.fn.lang">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>lang
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lang = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.local" id="apidoc.element.moment-business-days.fn.local">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>local
+        <span class="apidocSignatureSpan">(keepLocalTime)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setOffsetToLocal(keepLocalTime) {
+    if (this._isUTC) {
+        this.utcOffset(0, keepLocalTime);
+        this._isUTC = false;
+
+        if (keepLocalTime) {
+            this.subtract(getDateOffset(this), &#x27;m&#x27;);
+        }
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.locale" id="apidoc.element.moment-business-days.fn.locale">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>locale
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function locale(key) {
+    var newLocaleData;
+
+    if (key === undefined) {
+        return this._locale._abbr;
+    } else {
+        newLocaleData = locale_locales__getLocale(key);
+        if (newLocaleData != null) {
+            this._locale = newLocaleData;
+        }
+        return this;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+````javascript
+
+var moment = require(&#x27;moment-business-days&#x27;);
+
+var july4th = &#x27;07-04-2015&#x27;;
+var laborDay = &#x27;09-07-2015&#x27;;
+
+moment.<span class="apidocCodeKeywordSpan">locale</span>(&#x27;us&#x27;, {
+   holidays: [july4th, laborDay],
+   holidayFormat: &#x27;MM-DD-YYYY&#x27;
+});
+
+// moment-business-days will now stop considering these holidays as business days
+
+````
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.localeData" id="apidoc.element.moment-business-days.fn.localeData">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>localeData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function localeData() {
+    return this._locale;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+&#x27;use strict&#x27;;
+var moment = require(&#x27;moment&#x27;);
+
+moment.fn.isHoliday = function () {
+    var locale = this.<span class="apidocCodeKeywordSpan">localeData</span>();
+
+    if (locale._holidays) {
+        if (locale._holidays.indexOf(this.format(locale._holidayFormat)) &#x3e;= 0) return true;
+    }
+
+    return false;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.max" id="apidoc.element.moment-business-days.fn.max">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>max
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">max = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return businessDaysIntoMonth;
+};
+
+moment.fn.businessDiff = function(param) {
+param = moment(param);
+var signal = param.unix() &#x3c; this.unix()?1:-1;
+var start = moment.min(param, this).clone();
+var end = moment.<span class="apidocCodeKeywordSpan">max</span>(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+var weeks = end_sunday.diff(start_sunday, &#x27;days&#x27;) / 7;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.millisecond" id="apidoc.element.moment-business-days.fn.millisecond">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>millisecond
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">millisecond = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.milliseconds" id="apidoc.element.moment-business-days.fn.milliseconds">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>milliseconds
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">milliseconds = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.min" id="apidoc.element.moment-business-days.fn.min">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>min
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">min = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return businessDaysIntoMonth;
+};
+
+moment.fn.businessDiff = function(param) {
+param = moment(param);
+var signal = param.unix() &#x3c; this.unix()?1:-1;
+var start = moment.<span class="apidocCodeKeywordSpan">min</span>(param, this).clone();
+var end = moment.max(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+var weeks = end_sunday.diff(start_sunday, &#x27;days&#x27;) / 7;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.minute" id="apidoc.element.moment-business-days.fn.minute">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>minute
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minute = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.minutes" id="apidoc.element.moment-business-days.fn.minutes">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>minutes
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">minutes = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.month" id="apidoc.element.moment-business-days.fn.month">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>month
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetMonth(value) {
+    if (value != null) {
+        setMonth(this, value);
+        utils_hooks__hooks.updateOffset(this, true);
+        return this;
+    } else {
+        return get_set__get(this, &#x27;Month&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.monthBusinessDays" id="apidoc.element.moment-business-days.fn.monthBusinessDays">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthBusinessDays
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthBusinessDays = function () {
+    var me = this.clone();
+    var day = me.clone().startOf(&#x27;month&#x27;);
+    var end = me.clone().endOf(&#x27;month&#x27;);
+    var daysArr = [];
+    var done = false;
+    while (!done) {
+        if (day.isBusinessDay()) {
+            daysArr.push(day.clone());
+        };
+        if(end.diff(day.add(1,&#x27;d&#x27;)) &#x3c; 0) {
+            done = true;
+        };
+    };
+    return daysArr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**monthBusinessDays()**
+
+Retrieve an array of the business days in the month, each one is a moment object.
+
+```javascript
+//Busines days in month January 2015
+moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">monthBusinessDays</span>()
+
+/*
+[ { _isAMomentObject: true,
+_i: &#x27;01-01-2015&#x27;,
+_f: &#x27;DD-MM-YYYY&#x27;,
+_isUTC: false,
+_pf:{ ... },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.monthBusinessWeeks" id="apidoc.element.moment-business-days.fn.monthBusinessWeeks">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthBusinessWeeks
+        <span class="apidocSignatureSpan">(fromToday)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthBusinessWeeks = function (fromToday) {
+    var me = this.clone();
+    var day = fromToday ? me.clone() : me.clone().startOf(&#x27;month&#x27;);
+    var end = me.clone().endOf(&#x27;month&#x27;);
+    var weeksArr = [];
+    var daysArr = [];
+    var done = false;
+
+    while(!done) {
+        if(day.day() &#x3e;= 1 &#x26;&#x26; day.day() &#x3c; 6) {
+            daysArr.push(day.clone());
+        };
+        if(day.day() === 5) {
+            weeksArr.push(daysArr);
+            daysArr = [];
+        };
+        if(end.diff(day.add(1,&#x27;d&#x27;)) &#x3c; 0) {
+            if(daysArr.length &#x3c; 5) {
+                weeksArr.push(daysArr);
+            };
+            done = true;
+        };
+    };
+    return weeksArr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**monthBusinessWeeks()**
+
+Retrieve an array of arrays, these arrays are the representation of a business weeks and each week (array) have it own business
+days (Monday to Friday). There could be the case that one week (array) have less than 5 days, this is because the month started
+on the middle of the week, for example: the first week of January 2015 just have two days, Thursday 1st and Friday 2nd. **Each day
+ in the week arrays are moment objects.**
+
+```javascript
+//Busines weeks in month January 2015
+moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">monthBusinessWeeks</span>()
+
+/*
+[ [ { _isAMomentObject: true,
+_i: &#x27;01-01-2015&#x27;,
+_f: &#x27;DD-MM-YYYY&#x27;,
+_isUTC: false,
+_pf: [...],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.monthNaturalDays" id="apidoc.element.moment-business-days.fn.monthNaturalDays">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthNaturalDays
+        <span class="apidocSignatureSpan">(fromToday)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthNaturalDays = function (fromToday) {
+    var me = this.clone();
+    var day = fromToday ? me.clone() : me.clone().startOf(&#x27;month&#x27;);
+    var end = me.clone().endOf(&#x27;month&#x27;);
+    var daysArr = [];
+    var done = false;
+    while (!done) {
+        daysArr.push(day.clone());
+        if(end.diff(day.add(1,&#x27;d&#x27;)) &#x3c; 0) {
+            done = true;
+        };
+    };
+    return daysArr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(&#x27;Busines days in this month: &#x27;)
+console.log(moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).monthBusinessDays());
+
+console.log(&#x27;Busines weeks in this month: &#x27;)
+console.log(moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).monthBusinessWeeks());
+
+console.log(&#x27;Natural days in this month: &#x27;)
+console.log(moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">monthNaturalDays</span>());
+
+console.log(&#x27;Natural weeks in this month: &#x27;)
+console.log(moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).monthNaturalWeeks());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.monthNaturalWeeks" id="apidoc.element.moment-business-days.fn.monthNaturalWeeks">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>monthNaturalWeeks
+        <span class="apidocSignatureSpan">(fromToday)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">monthNaturalWeeks = function (fromToday) {
+    var me = this.clone();
+    var day = fromToday ? me.clone() : me.clone().startOf(&#x27;month&#x27;);
+    var end = me.clone().endOf(&#x27;month&#x27;);
+    var weeksArr = [];
+    var daysArr = [];
+    var done = false;
+
+    while(!done) {
+        daysArr.push(day.clone());
+        if(day.day() === 6) {
+            weeksArr.push(daysArr);
+            daysArr = [];
+        };
+        if(end.diff(day.add(1,&#x27;d&#x27;)) &#x3c; 0) {
+            if(daysArr.length &#x3c; 7) {
+                weeksArr.push(daysArr);
+            };
+            done = true;
+        };
+    };
+    return weeksArr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+console.log(&#x27;Busines weeks in this month: &#x27;)
+console.log(moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).monthBusinessWeeks());
+
+console.log(&#x27;Natural days in this month: &#x27;)
+console.log(moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).monthNaturalDays());
+
+console.log(&#x27;Natural weeks in this month: &#x27;)
+console.log(moment(&#x27;01-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">monthNaturalWeeks</span>());
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.months" id="apidoc.element.moment-business-days.fn.months">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>months
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">months = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.nextBusinessDay" id="apidoc.element.moment-business-days.fn.nextBusinessDay">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>nextBusinessDay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nextBusinessDay = function () {
+    var loop = 1;
+    var limit = 7;
+    while (loop &#x3c; limit) {
+        if (this.add(1, &#x27;d&#x27;).isBusinessDay()) {
+            break;
+        };
+        loop++;
+    };
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**nextBusinessDay()**
+
+Will retrieve the next business date as moment date object:
+
+```javascript
+//Next busines day of Friday 30-01-2015
+moment(&#x27;30-01-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">nextBusinessDay</span>()._d // Mon Feb
+ 02 2015 00:00:00 GMT-0600 (CST)
+
+//Next busines day of Monday 02-02-2015
+moment(&#x27;02-02-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).nextBusinessDay()._d //Tue Feb 03 2015 00:00:00 GMT-0600 (CST)
+```
+
+**prevBusinessDay()**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.parseZone" id="apidoc.element.moment-business-days.fn.parseZone">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>parseZone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setOffsetToParsedOffset() {
+    if (this._tzm) {
+        this.utcOffset(this._tzm);
+    } else if (typeof this._i === &#x27;string&#x27;) {
+        this.utcOffset(offsetFromString(this._i));
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.parsingFlags" id="apidoc.element.moment-business-days.fn.parsingFlags">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>parsingFlags
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parsingFlags() {
+    return extend({}, getParsingFlags(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.prevBusinessDay" id="apidoc.element.moment-business-days.fn.prevBusinessDay">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>prevBusinessDay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prevBusinessDay = function () {
+    var loop = 1;
+    var limit = 7;
+    while (loop &#x3c; limit) {
+        if (this.subtract(1, &#x27;d&#x27;).isBusinessDay()) {
+            break;
+        };
+        loop++;
+    };
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+**prevBusinessDay()**
+
+Will retrieve the previous business date as moment date object:
+
+```javascript
+//Previous busines day of Monday 02-02-2015
+moment(&#x27;02-02-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).<span class="apidocCodeKeywordSpan">prevBusinessDay</span>()._d // Fri Jan
+ 30 2015 00:00:00 GMT-0600 (CST)
+
+//Previous busines day of Tuesday 03-02-2015
+moment(&#x27;03-02-2015&#x27;, &#x27;DD-MM-YYYY&#x27;).prevBusinessDay()._d //Mon Feb 02 2015 00:00:00 GMT-0600 (CST)
+```
+
+**monthBusinessDays()**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.quarter" id="apidoc.element.moment-business-days.fn.quarter">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>quarter
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetQuarter(input) {
+    return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.quarters" id="apidoc.element.moment-business-days.fn.quarters">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>quarters
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetQuarter(input) {
+    return input == null ? Math.ceil((this.month() + 1) / 3) : this.month((input - 1) * 3 + this.month() % 3);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.second" id="apidoc.element.moment-business-days.fn.second">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>second
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">second = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.seconds" id="apidoc.element.moment-business-days.fn.seconds">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>seconds
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">seconds = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.set" id="apidoc.element.moment-business-days.fn.set">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>set
+        <span class="apidocSignatureSpan">(units, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSet(units, value) {
+    var unit;
+    if (typeof units === &#x27;object&#x27;) {
+        for (unit in units) {
+            this.set(unit, units[unit]);
+        }
+    } else {
+        units = normalizeUnits(units);
+        if (typeof this[units] === &#x27;function&#x27;) {
+            return this[units](value);
+        }
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.startOf" id="apidoc.element.moment-business-days.fn.startOf">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>startOf
+        <span class="apidocSignatureSpan">(units)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function startOf(units) {
+    units = normalizeUnits(units);
+    // the following switch intentionally omits break keywords
+    // to utilize falling through the cases.
+    switch (units) {
+    case &#x27;year&#x27;:
+        this.month(0);
+<span class="apidocCodeCommentSpan">        /* falls through */
+</span>    case &#x27;quarter&#x27;:
+    case &#x27;month&#x27;:
+        this.date(1);
+        /* falls through */
+    case &#x27;week&#x27;:
+    case &#x27;isoWeek&#x27;:
+    case &#x27;day&#x27;:
+        this.hours(0);
+        /* falls through */
+    case &#x27;hour&#x27;:
+        this.minutes(0);
+        /* falls through */
+    case &#x27;minute&#x27;:
+        this.seconds(0);
+        /* falls through */
+    case &#x27;second&#x27;:
+        this.milliseconds(0);
+    }
+
+    // weeks are a special case
+    if (units === &#x27;week&#x27;) {
+        this.weekday(0);
+    }
+    if (units === &#x27;isoWeek&#x27;) {
+        this.isoWeekday(1);
+    }
+
+    // quarters are also special
+    if (units === &#x27;quarter&#x27;) {
+        this.month(Math.floor(this.month() / 3) * 3);
+    }
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    loop++;
+};
+return this;
+};
+
+moment.fn.monthBusinessDays = function() {
+var me = this.clone();
+var day = me.clone().<span class="apidocCodeKeywordSpan">startOf</span>(&#x27;month&#x27;);
+var end = me.clone().endOf(&#x27;month&#x27;);
+var daysArr = [];
+var done = false;
+while (!done) {
+    if (day.isBusinessDay()) {
+        daysArr.push(day.clone());
+    };
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.subtract" id="apidoc.element.moment-business-days.fn.subtract">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>subtract
+        <span class="apidocSignatureSpan">(val, period)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">subtract = function (val, period) {
+    var dur, tmp;
+    //invert the arguments, but complain about it
+    if (period !== null &#x26;&#x26; !isNaN(+period)) {
+        deprecateSimple(name, &#x27;moment().&#x27; + name  + &#x27;(period, number) is deprecated. Please use moment().&#x27; + name + &#x27;(number, period
+).&#x27;);
+        tmp = val; val = period; period = tmp;
+    }
+
+    val = typeof val === &#x27;string&#x27; ? +val : val;
+    dur = create__createDuration(val, period);
+    add_subtract__addSubtract(this, dur, direction);
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+param = moment(param);
+var signal = param.unix() &#x3c; this.unix()?1:-1;
+var start = moment.min(param, this).clone();
+var end = moment.max(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().<span class="apidocCodeKeywordSpan">subtract</span>(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+var weeks = end_sunday.diff(start_sunday, &#x27;days&#x27;) / 7;
+
+start_offset = Math.abs(start_offset);
+if (start_offset == 7) {
+  start_offset = 5;
+} else if (start_offset == 1) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.to" id="apidoc.element.moment-business-days.fn.to">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>to
+        <span class="apidocSignatureSpan">(time, withoutSuffix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function to(time, withoutSuffix) {
+    if (!this.isValid()) {
+        return this.localeData().invalidDate();
+    }
+    return create__createDuration({from: this, to: time}).locale(this.locale()).humanize(!withoutSuffix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.toArray" id="apidoc.element.moment-business-days.fn.toArray">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toArray
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toArray() {
+    var m = this;
+    return [m.year(), m.month(), m.date(), m.hour(), m.minute(), m.second(), m.millisecond()];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.toDate" id="apidoc.element.moment-business-days.fn.toDate">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toDate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toDate() {
+    return this._offset ? new Date(+this) : this._d;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.toISOString" id="apidoc.element.moment-business-days.fn.toISOString">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toISOString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moment_format__toISOString() {
+    var m = this.clone().utc();
+    if (0 &#x3c; m.year() &#x26;&#x26; m.year() &#x3c;= 9999) {
+        if (&#x27;function&#x27; === typeof Date.prototype.toISOString) {
+            // native implementation is ~50x faster, use it when we can
+            return this.toDate().toISOString();
+        } else {
+            return formatMoment(m, &#x27;YYYY-MM-DD[T]HH:mm:ss.SSS[Z]&#x27;);
+        }
+    } else {
+        return formatMoment(m, &#x27;YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.toJSON" id="apidoc.element.moment-business-days.fn.toJSON">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function moment_format__toISOString() {
+    var m = this.clone().utc();
+    if (0 &#x3c; m.year() &#x26;&#x26; m.year() &#x3c;= 9999) {
+        if (&#x27;function&#x27; === typeof Date.prototype.toISOString) {
+            // native implementation is ~50x faster, use it when we can
+            return this.toDate().toISOString();
+        } else {
+            return formatMoment(m, &#x27;YYYY-MM-DD[T]HH:mm:ss.SSS[Z]&#x27;);
+        }
+    } else {
+        return formatMoment(m, &#x27;YYYYYY-MM-DD[T]HH:mm:ss.SSS[Z]&#x27;);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.toNow" id="apidoc.element.moment-business-days.fn.toNow">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toNow
+        <span class="apidocSignatureSpan">(withoutSuffix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toNow(withoutSuffix) {
+    return this.to(local__createLocal(), withoutSuffix);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.toObject" id="apidoc.element.moment-business-days.fn.toObject">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toObject
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toObject() {
+    var m = this;
+    return {
+        years: m.year(),
+        months: m.month(),
+        date: m.date(),
+        hours: m.hours(),
+        minutes: m.minutes(),
+        seconds: m.seconds(),
+        milliseconds: m.milliseconds()
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.toString" id="apidoc.element.moment-business-days.fn.toString">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() {
+    return this.clone().locale(&#x27;en&#x27;).format(&#x27;ddd MMM DD YYYY HH:mm:ss [GMT]ZZ&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.unix" id="apidoc.element.moment-business-days.fn.unix">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>unix
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unix() {
+    return Math.floor(+this / 1000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+return businessDaysIntoMonth;
+};
+
+moment.fn.businessDiff = function(param) {
+param = moment(param);
+var signal = param.<span class="apidocCodeKeywordSpan">unix</span>() &#x3c; this.unix()?1:-1;
+var start = moment.min(param, this).clone();
+var end = moment.max(param, this).clone();
+var start_offset = start.day() - 7;
+var end_offset = end.day();
+
+var end_sunday = end.clone().subtract(&#x27;d&#x27;, end_offset);
+var start_sunday = start.clone().subtract(&#x27;d&#x27;, start_offset);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.utc" id="apidoc.element.moment-business-days.fn.utc">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>utc
+        <span class="apidocSignatureSpan">(keepLocalTime)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setOffsetToUTC(keepLocalTime) {
+    return this.utcOffset(0, keepLocalTime);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.utcOffset" id="apidoc.element.moment-business-days.fn.utcOffset">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>utcOffset
+        <span class="apidocSignatureSpan">(input, keepLocalTime)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetOffset(input, keepLocalTime) {
+    var offset = this._offset || 0,
+        localAdjust;
+    if (input != null) {
+        if (typeof input === &#x27;string&#x27;) {
+            input = offsetFromString(input);
+        }
+        if (Math.abs(input) &#x3c; 16) {
+            input = input * 60;
+        }
+        if (!this._isUTC &#x26;&#x26; keepLocalTime) {
+            localAdjust = getDateOffset(this);
+        }
+        this._offset = input;
+        this._isUTC = true;
+        if (localAdjust != null) {
+            this.add(localAdjust, &#x27;m&#x27;);
+        }
+        if (offset !== input) {
+            if (!keepLocalTime || this._changeInProgress) {
+                add_subtract__addSubtract(this, create__createDuration(input - offset, &#x27;m&#x27;), 1, false);
+            } else if (!this._changeInProgress) {
+                this._changeInProgress = true;
+                utils_hooks__hooks.updateOffset(this, true);
+                this._changeInProgress = null;
+            }
+        }
+        return this;
+    } else {
+        return this._isUTC ? offset : getDateOffset(this);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.valueOf" id="apidoc.element.moment-business-days.fn.valueOf">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>valueOf
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function to_type__valueOf() {
+    return +this._d - ((this._offset || 0) * 60000);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.week" id="apidoc.element.moment-business-days.fn.week">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>week
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetWeek(input) {
+    var week = this.localeData().week(this);
+    return input == null ? week : this.add((input - week) * 7, &#x27;d&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.weekYear" id="apidoc.element.moment-business-days.fn.weekYear">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weekYear
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetWeekYear(input) {
+    var year = weekOfYear(this, this.localeData()._week.dow, this.localeData()._week.doy).year;
+    return input == null ? year : this.add((input - year), &#x27;y&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.weekday" id="apidoc.element.moment-business-days.fn.weekday">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weekday
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetLocaleDayOfWeek(input) {
+    var weekday = (this.day() + 7 - this.localeData()._week.dow) % 7;
+    return input == null ? weekday : this.add(input - weekday, &#x27;d&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.weeks" id="apidoc.element.moment-business-days.fn.weeks">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weeks
+        <span class="apidocSignatureSpan">(input)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSetWeek(input) {
+    var week = this.localeData().week(this);
+    return input == null ? week : this.add((input - week) * 7, &#x27;d&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.weeksInYear" id="apidoc.element.moment-business-days.fn.weeksInYear">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>weeksInYear
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getWeeksInYear() {
+    var weekInfo = this.localeData()._week;
+    return weeksInYear(this.year(), weekInfo.dow, weekInfo.doy);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.year" id="apidoc.element.moment-business-days.fn.year">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>year
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">year = function (value) {
+    if (value != null) {
+        get_set__set(this, unit, value);
+        utils_hooks__hooks.updateOffset(this, keepTime);
+        return this;
+    } else {
+        return get_set__get(this, unit);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.years" id="apidoc.element.moment-business-days.fn.years">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>years
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">years = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.zone" id="apidoc.element.moment-business-days.fn.zone">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>zone
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">zone = function () {
+    if (firstTime) {
+        warn(msg + &#x27;\n&#x27; + (new Error()).stack);
+        firstTime = false;
+    }
+    return fn.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.zoneAbbr" id="apidoc.element.moment-business-days.fn.zoneAbbr">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>zoneAbbr
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getZoneAbbr() {
+    return this._isUTC ? &#x27;UTC&#x27; : &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.moment-business-days.fn.zoneName" id="apidoc.element.moment-business-days.fn.zoneName">
+        function <span class="apidocSignatureSpan">moment-business-days.fn.</span>zoneName
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getZoneName() {
+    return this._isUTC ? &#x27;Coordinated Universal Time&#x27; : &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
